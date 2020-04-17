@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -25,9 +25,11 @@ RDEPEND=">=sys-devel/gcc-4.8.3
 	!systemd? ( sys-power/pm-utils )"
 
 pkg_nofetch() {
-	einfo "Please download DisplayLink USB Graphics Software for Ubuntu 4.1.zip from"
-	einfo "http://www.displaylink.com/downloads/ubuntu"
-	einfo "and rename it to ${P}.zip"
+	einfo "Please download displaylink-driver-5.2.14.zip from"
+	einfo "https://github.com/SDNick484/displaylink-gentoo/tree/master/distfiles"
+	einfo "and place it in /var/cache/distfiles"
+	einfo "The zip file is a modified copy of the DisplayLink USB Graphics Software for Ubuntu"
+	einfo "with evdi build steps removed to allow evdi live ebuild to pull from Github"
 }
 
 src_unpack() {
